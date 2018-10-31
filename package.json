@@ -1,0 +1,22 @@
+{
+  "name": "async-threading",
+  "version": "1.0.2",
+  "description": "Async javascript the way I like it.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Iainmon/Thread.js.git"
+  },
+  "keywords": [
+    "javascript"
+  ],
+  "author": "Iain Moncrief <iaimmoncrief@gmail.com> (https://nexal.net)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Iainmon/Thread.js/issues"
+  },
+  "homepage": "https://github.com/Iainmon/Thread.js#readme"
+}
