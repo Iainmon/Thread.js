@@ -9,23 +9,23 @@ Javascript async the way I like it.
 
 ## Usage
 ```javascript
-    let Thread = require('async-threading');
+let Thread = require('async-threading');
 ```
 ###- Tasks
 
 Same scope as block:
 
 ```javascript
-  let callEverySecond = new Thread( () => {
-      console.log(callEverySecond.fireTimes + ' seconds have passed.');
-  }, 1000);
+let callEverySecond = new Thread( () => {
+    console.log(callEverySecond.fireTimes + ' seconds have passed.');
+}, 1000);
 ```
     
 Anonymous scope:
 ```javascript
-    let callEverySecond = new Thread( function () {
-        console.log(this.fireTimes + ' seconds have passed.');
-    }, 1000);
+let callEverySecond = new Thread( function () {
+    console.log(this.fireTimes + ' seconds have passed.');
+}, 1000);
 ```
   * Methods for task Threads
     * `.toggle()` Sets the Thread to the opposite state.
@@ -40,15 +40,15 @@ Anonymous scope:
 
 Asynchronous delayed statement:
 ```javascript
-    Thread.spawn( () => {
-        console.log('1 second has passed.');
-    }, 1000);
+Thread.spawn( () => {
+    console.log('1 second has passed.');
+}, 1000);
 ```
 Anonymous asynchronous delayed function:
 ```javascript
-    Thread.spawn( function () {
-        console.log('1 second has passed.');
-    }, 1000);
+Thread.spawn( function () {
+    console.log('1 second has passed.');
+}, 1000);
 ```
 These will execute `1000ms` (one second) after they are declared
 
@@ -56,15 +56,15 @@ These will execute `1000ms` (one second) after they are declared
 
 Asynchronous statement:
 ```javascript
-    Thread.do( () => {
-        console.log('Code has been executed asynchronously.');
-    });
+Thread.do( () => {
+    console.log('Code has been executed asynchronously.');
+});
 ```
 Anonymous asynchronous function:
 ```javascript
-    Thread.do( function () {
-        console.log('Code has been executed asynchronously.');
-    });
+Thread.do( function () {
+    console.log('Code has been executed asynchronously.');
+});
 ```
 These will execute immediately and asynchronously once they are called.
 
