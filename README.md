@@ -4,14 +4,13 @@ Thread.js
 Javascript async the way I like it.
 
 ## Installation
-
-  `npm install async-threading`
+`npm install async-threading`
 
 ## Usage
 ```javascript
 let Thread = require('async-threading');
 ```
-###- Tasks
+### - Tasks
 
 Same scope as block:
 
@@ -36,7 +35,7 @@ let callEverySecond = new Thread( function () {
   
   - Warning: I do not recomend doing `new Thread` without assigning it to a variable, because you will not be able to `toggle` or `kill` it.
     
-###- Delayed Asynchronous Statements and Functions
+### - Delayed Asynchronous Statements and Functions
 
 Asynchronous delayed statement:
 ```javascript
@@ -52,17 +51,17 @@ Thread.spawn( function () {
 ```
 These will execute `1000ms` (one second) after they are declared
 
-###- Asynchronous Statements and Functions
+### - Asynchronous Statements and Functions
 
 Asynchronous statement:
 ```javascript
-Thread.do( () => {
+Thread.do( async () => {
     console.log('Code has been executed asynchronously.');
 });
 ```
 Anonymous asynchronous function:
 ```javascript
-Thread.do( function () {
+Thread.do( async function () {
     console.log('Code has been executed asynchronously.');
 });
 ```
